@@ -1,0 +1,35 @@
+/* Import fonts perso */
+@import "./fonts.css";
+
+/* Variables charte graphique */
+:root {
+  /* font */
+  --euclid: "Euclid", Arial, sans-serif;
+
+  /* dégradés */
+  --main-gradient: radial-gradient(256.67% 56.7% at 23.76% 54.58%, #fa5842 0%, #7454c9 100%);
+  --project-1-gradient: linear-gradient(90deg, #e7e7db 0%, #f3e2db 52.88%);
+  --project-2-gradient: linear-gradient(90deg, #ad6650 0%, #e5baaa 24.52%);
+  --project-3-gradient: radial-gradient(
+    256.67% 56.7% at 23.76% 54.58%,
+    #f8c050 16.88%,
+    #c7305b 79.13%,
+    #5a018d 100%
+  );
+  --project-4-gradient: radial-gradient(
+    256.67% 56.7% at 23.76% 54.58%,
+    #c10010 36.06%,
+    #000 50%,
+    #240873 100%
+  );
+  --project-5-gradient: radial-gradient(
+    256.67% 56.7% at 23.76% 54.58%,
+    #313042 0%,
+    #313040 38.46%,
+    #ff7a1f 69.71%
+  );
+}
+
+body {
+  font-family: var(--euclid);
+}
