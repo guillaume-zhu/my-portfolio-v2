@@ -61,8 +61,18 @@ header {
 
   /* style temporaire */
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid red;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  cursor: pointer;
 }
 
 /* --- 3. CLASSE SLIDE ANIMATION --- */

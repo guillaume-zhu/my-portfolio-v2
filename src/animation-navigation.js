@@ -4,6 +4,10 @@ import Observer from "gsap/Observer"
 
 gsap.registerPlugin(ScrollToPlugin, Observer)
 
+// --------------------------------
+// ANIMATION GSAP SCROLL TO
+// --------------------------------
+
 // --- Séléction des sections avec la classe .slide ---
 const sections = gsap.utils.toArray(".slide")
 
@@ -56,4 +60,19 @@ Observer.create({
   },
 
   tolerance: 10,
+})
+
+// --------------------------------
+// NAVIGATION HEADER
+// --------------------------------
+const links = document.querySelectorAll(".nav-link")
+
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const indexCible = parseInt(link.dataset.index)
+
+    console.log(indexCible)
+
+    goToSection(indexCible)
+  })
 })
