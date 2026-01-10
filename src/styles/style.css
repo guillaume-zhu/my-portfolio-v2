@@ -32,6 +32,19 @@
 }
 
 /* --- 1. CONFIGURATION GÉNÉRALE --- */
+
+/* cacher barre de scroll Chrome, Safari, Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* cacher barre de scroll pour IE, Edge et Firefox */
+body,
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
   font-family: var(--euclid);
   overflow: hidden;

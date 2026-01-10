@@ -1,0 +1,59 @@
+import gsap from "gsap"
+import ScrollToPlugin from "gsap/ScrollToPlugin"
+import Observer from "gsap/Observer"
+
+gsap.registerPlugin(ScrollToPlugin, Observer)
+
+// --- Séléction des sections avec la classe .slide ---
+const sections = gsap.utils.toArray(".slide")
+
+// --- Mémoire ---
+let currentIndex = 0
+let isAnimating = false
+
+// --- Animation ---
+const goToSection = (index) => {
+  // Sécurité 1 : Si animation active -> ne rien faire
+  if (isAnimating) {
+    return
+  }
+
+  // Sécurité 2 : Si destination non compris dans les slides existantes
+  if (index < 0 || index >= sections.length) {
+    return
+  }
+
+  // Initialisation
+  isAnimating = true
+  currentIndex = index
+
+  // Animation mouvement
+  gsap.to(window, {
+    scrollTo: { y: index * window.innerHeight },
+    duration: 1,
+    ease: "power2.inOut",
+
+    // Quand fini
+    onComplete: () => {
+      isAnimating = false
+    },
+  })
+}
+
+// --- Détection action ---
+Observer.create({
+  type: "wheel,touch,pointer",
+  preventDefault: true,
+
+  //   Si détecte mouvement vers le haut
+  onUp: () => {
+    goToSection(currentIndex - 1)
+  },
+
+  //   Si détéce mouvement vers le bas
+  onDown: () => {
+    goToSection(currentIndex + 1)
+  },
+
+  tolerance: 10,
+})
