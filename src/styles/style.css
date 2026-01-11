@@ -7,7 +7,8 @@
   --euclid: "Euclid", Arial, sans-serif;
   --jost: "Jost", Arial, sans-serif;
 
-  /* dégradés */
+  /* couleurs et dégradés */
+  --white: #ffffff;
   --main-gradient: radial-gradient(256.67% 56.7% at 23.76% 54.58%, #fa5842 0%, #7454c9 100%);
   --project-1-gradient: linear-gradient(90deg, #e7e7db 0%, #f3e2db 52.88%);
   --project-2-gradient: linear-gradient(90deg, #ad6650 0%, #e5baaa 24.52%);
@@ -45,9 +46,16 @@ html {
   scrollbar-width: none;
 }
 
+/* rem calcul */
+html {
+  /* 62.5% de 16px = 10px */
+  font-size: 62.5%;
+}
+
 body {
   font-family: var(--euclid);
   overflow: hidden;
+  font-size: 1.6rem;
 }
 
 /* --- 2. HEADER --- */
@@ -88,20 +96,53 @@ header nav ul {
 }
 
 /* --- 4. PARTIE INTRO --- */
+.intro-box {
+  padding: 8px;
+}
+
 .intro-wrapper {
   width: 100%;
 
   /* fond temporaire */
-  background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%);
+  /* background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%); */
+  background-image: url("/src/assets/images/degrade-hd.png");
+  background-size: cover;
+  background-position: center-top;
+  background-repeat: no-repeat;
+  border-radius: 4rem;
 }
 
 .intro-wrapper .slide {
   background-color: transparent;
 }
 
+/* hero slide */
+section.hero {
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.hero-logo {
+  width: 40rem;
+  height: auto;
+  fill: var(--white);
+}
+
+.hero-name {
+  position: absolute;
+  bottom: 4%;
+  left: 2.5%;
+}
+
+.hero-name p {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
 /* --- 5. PARTIE PROJET --- */
 .projetcs-wrapper {
-  background-color: #fff;
+  background-color: var(--white);
   position: relative;
   z-index: 10;
 }

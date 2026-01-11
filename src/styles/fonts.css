@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "MaPolice";
+  font-family: "Euclid";
   src: url("../assets/fonts/EuclidCircular-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "MaPolice";
+  font-family: "Euclid";
   src: url("../assets/fonts/EuclidCircular-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
