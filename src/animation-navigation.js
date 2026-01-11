@@ -11,6 +11,9 @@ gsap.registerPlugin(ScrollToPlugin, Observer)
 // --- Séléction des sections avec la classe .slide ---
 const sections = gsap.utils.toArray(".slide")
 
+// --- Séléction header ---
+const header = document.querySelector("header")
+
 // --- Mémoire ---
 let currentIndex = 0
 let isAnimating = false
@@ -30,6 +33,15 @@ const goToSection = (index) => {
   // Initialisation
   isAnimating = true
   currentIndex = index
+
+  // Header change
+  if (index >= 3) {
+    header.classList.add("header-dark")
+  }
+  // Sinon (Intro ou Footer), on remet le header en blanc
+  else {
+    header.classList.remove("header-dark")
+  }
 
   // Animation mouvement
   gsap.to(window, {
