@@ -542,4 +542,5 @@ section.hero {
   font-weight: 300;
   color: var(--white);
   padding: 0rem 15rem 8rem 15rem;
+  font-family: var(--jost);
 }
