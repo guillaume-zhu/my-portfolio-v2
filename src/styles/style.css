@@ -111,12 +111,12 @@ header nav ul {
 
 /* --- 4. PARTIE INTRO --- */
 .intro-box {
-  padding: 8px;
+  padding: 0.8rem 0.8rem 0 0.8rem;
 }
 
 .intro-wrapper {
   width: 100%;
-
+  max-height: calc(100vh - 0.8rem);
   /* fond temporaire */
   /* background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%); */
   background-image: url("/src/assets/images/degrade-hd.png");
@@ -329,10 +329,10 @@ section.hero {
 }
 
 /* --- 5. PARTIE PROJET --- */
-.projetcs-wrapper {
+.projects-wrapper {
   background-color: var(--white);
   position: relative;
-  z-index: 10;
+  z-index: 30;
 }
 
 /* ligne visuelle temporaire pour voire les différentes parties */
