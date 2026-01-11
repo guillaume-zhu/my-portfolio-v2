@@ -9,7 +9,7 @@
 
   /* couleurs et dégradés */
   --white: #ffffff;
-  --main-gradient: radial-gradient(256.67% 56.7% at 23.76% 54.58%, #fa5842 0%, #7454c9 100%);
+  --main-gradient: linear-gradient(88deg, #fa5842 3.7%, #7454c9 79.26%);
   --project-1-gradient: linear-gradient(90deg, #e7e7db 0%, #f3e2db 52.88%);
   --project-2-gradient: linear-gradient(90deg, #ad6650 0%, #e5baaa 24.52%);
   --project-3-gradient: radial-gradient(
@@ -58,6 +58,7 @@ body {
   font-size: 1.6rem;
 }
 
+/* texxt styles */
 .text-head {
   font-size: 12rem;
   font-weight: 600;
@@ -70,6 +71,22 @@ body {
 p {
   font-size: 2rem;
   line-height: 140%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 45rem;
+  line-height: 120%;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 10rem;
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 120%;
 }
 
 /* --- 2. HEADER --- */
@@ -116,7 +133,6 @@ header nav ul {
 
 .intro-wrapper {
   width: 100%;
-  max-height: calc(100vh - 0.8rem);
   /* fond temporaire */
   /* background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%); */
   background-image: url("/src/assets/images/degrade-hd.png");
@@ -128,6 +144,7 @@ header nav ul {
 
 .intro-wrapper .slide {
   background-color: transparent;
+  max-height: calc(100vh - 0.6rem);
 }
 
 /* hero slide */
@@ -335,10 +352,29 @@ section.hero {
   z-index: 30;
 }
 
-/* ligne visuelle temporaire pour voire les différentes parties */
-.projects-wrapper .slide {
-  border-bottom: 1px solid blue;
+.project-item > img {
+  width: 33%;
+  height: auto;
+  position: absolute;
+  border-radius: 8%;
 }
+
+/* 01 */
+.project-item > h2 {
+  position: absolute;
+  top: 6%;
+}
+.projects-wrapper > section:first-child > h1 {
+  background: linear-gradient(90deg, #e7e7db 0%, #f3e2db 52.88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.project-item > img {
+  top: 25%;
+  box-shadow: 11px 100px 104.4px -48px rgba(148, 112, 95, 0.61);
+}
+*/
 
 /* --- 6. FOOTER --- */
 .footer {
