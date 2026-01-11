@@ -140,6 +140,46 @@ section.hero {
   font-weight: 300;
 }
 
+/* presentation slide */
+.presentation {
+  padding: 15rem;
+  justify-content: center;
+  gap: 150px;
+}
+
+.presentation-text {
+  font-size: 6rem;
+  font-weight: 500;
+  color: var(--white);
+  width: 70rem;
+  line-height: 130%;
+}
+
+.presentation-img-group {
+  /* border: 5px solid red; */
+  position: relative;
+  width: 41.3rem;
+  height: 58rem;
+}
+.presentation-img-group img {
+  position: absolute;
+}
+.presentation-img1 {
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.presentation-img2 {
+  bottom: 38px;
+  left: 38px;
+  z-index: 20;
+}
+.presentation-img3 {
+  top: 0px;
+  right: 0px;
+  z-index: 30;
+}
+
 /* --- 5. PARTIE PROJET --- */
 .projetcs-wrapper {
   background-color: var(--white);
