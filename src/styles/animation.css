@@ -37,9 +37,9 @@ header.header-dark nav ul li a:hover {
   stroke-width: 2px;
 }
 
-/* skills */
+/* presentation */
 
-/* Animation */
+/* skills */
 .skills-wrapper-small-circle2 {
   transition: all 0.5s ease;
   cursor: pointer;
@@ -120,7 +120,7 @@ header.header-dark nav ul li a:hover {
 }
 
 /* --- PARTIE PROJET --- */
-.project-item > img {
+/* .project-item > img {
   transition: transform 0.5s ease;
   cursor: pointer;
 }
@@ -140,7 +140,7 @@ header.header-dark nav ul li a:hover {
 }
 .project-item > h1:hover {
   transform: scale(0.9);
-}
+} */
 
 /* --- FOOTER --- */
 .footer-follow-circle {
@@ -155,4 +155,47 @@ header.header-dark nav ul li a:hover {
 }
 .footer-follow-circle img:hover {
   transform: scale(1.5);
+}
+
+/* un projet ? */
+.footer-project-text {
+  display: inline-block;
+  border-right: 4px solid var(--white);
+  width: fit-content;
+  white-space: nowrap;
+  animation: blink-cursor 0.7s step-end infinite;
+  min-height: 1.2em;
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--white);
+  }
+}
+
+.footer-contact-text {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--white);
+  cursor: pointer;
+  margin-top: -2%;
+  transition: color 0.4s ease, -webkit-text-stroke 0.4s ease;
+}
+
+.footer-contact-text:hover {
+  color: var(--white);
+  -webkit-text-stroke: 0px transparent;
+}
+
+.footer-arrow {
+  display: inline-block;
+  transform: rotate(45deg);
+  transition: transform 0.4s ease;
+}
+
+.footer-contact-text:hover .footer-arrow {
+  transform: rotate(0deg) translate(10px, -10px);
 }
