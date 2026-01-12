@@ -1,0 +1,158 @@
+/* --- HEADER --- */
+.nav-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+  text-stroke: 1px var(--white);
+}
+
+header.header-dark nav ul li a:hover {
+  -webkit-text-stroke: 1px rgb(29, 29, 29);
+}
+
+/* --- PARTIE INTRO --- */
+
+/* hero */
+.hero-logo {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.hero-logo path {
+  fill: var(--white);
+  stroke: var(--white);
+  stroke-width: 0;
+  transition: all 0.5s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.02);
+}
+
+.hero-logo:hover path {
+  fill: rgba(255, 255, 255, 0.2);
+  stroke-width: 2px;
+}
+
+/* skills */
+
+/* Animation */
+.skills-wrapper-small-circle2 {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.skills-wrapper-small-circle2:hover {
+  margin-left: 0;
+  backdrop-filter: blur(0);
+}
+
+.skills-wrapper-small-ellipse1 {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.skills-wrapper-small-ellipse1:hover {
+  backdrop-filter: blur(10px);
+}
+
+.skills-wrapper-small-ellipse2 {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.skills-wrapper-small-ellipse2:hover {
+  backdrop-filter: blur(0);
+}
+
+/* défilement infini */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-shrink: 0;
+  animation: scrollMarquee 40s linear infinite;
+  will-change: transform;
+  padding-right: 2rem;
+}
+
+.marquee-track .text-head {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+/* skills */
+.skills-map > div {
+  cursor: pointer;
+}
+
+.skills-map > div > div {
+  transition: transform 0.5s ease;
+}
+.skills-map > div:hover > div {
+  transform: scale(1.05);
+}
+
+/* --- PARTIE PROJET --- */
+.project-item > img {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.project-item > img:hover {
+  transform: scale(1.05);
+}
+
+.projects-wrapper > section:nth-child(2) > img:hover,
+.projects-wrapper > section:nth-child(3) > img:hover,
+.projects-wrapper > section:nth-child(4) > img:hover,
+.projects-wrapper > section:nth-child(5) > img:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.project-item > h1 {
+  transition: transform 0.5s ease;
+}
+.project-item > h1:hover {
+  transform: scale(0.9);
+}
+
+/* --- FOOTER --- */
+.footer-follow-circle {
+  transition: all 0.5s ease;
+}
+.footer-follow-circle:hover {
+  backdrop-filter: blur(0);
+}
+
+.footer-follow-circle img {
+  transition: transform 0.2s ease;
+}
+.footer-follow-circle img:hover {
+  transform: scale(1.5);
+}

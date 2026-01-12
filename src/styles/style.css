@@ -1,6 +1,9 @@
 /* Import fonts perso */
 @import "./fonts.css";
 
+/* Import animations */
+@import "./animation.css";
+
 /* --- 0. VARIABLES --- */
 :root {
   /* font */
@@ -100,7 +103,7 @@ header nav ul {
 
 .nav-link {
   cursor: pointer;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .nav-logo {
@@ -169,7 +172,7 @@ section.hero {
 .hero-logo {
   width: 40rem;
   height: auto;
-  fill: var(--white);
+  /* fill: var(--white); */
 }
 
 .hero-name {
@@ -256,6 +259,7 @@ section.hero {
   border-bottom: 2px solid var(--white);
   border-radius: 0px 500px 500px 0px;
   flex-grow: 1;
+  backdrop-filter: blur(0px);
 }
 .skills-wrapper-small-ellipse2 {
   border: 2px solid var(--white);
@@ -263,6 +267,7 @@ section.hero {
   backdrop-filter: blur(20px);
   flex-grow: 1;
   flex-direction: column;
+  opacity: 100%;
 }
 .skills-wrapper-small-ellipse2 p {
   font-size: 2rem;
@@ -294,6 +299,10 @@ section.hero {
   border: 2px solid var(--white);
   aspect-ratio: 1/1;
   border-radius: 500%;
+}
+
+.skills-wrapper-small-circle1 {
+  backdrop-filter: blur(10px);
 }
 
 .skills-wrapper-small:nth-child(2) {
@@ -330,6 +339,7 @@ section.hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(0);
 }
 .skills-map > div:first-child {
   border-radius: 500px 500px 500px 500px;
